@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player | enjoy</title>
+    <script src="https://kit.fontawesome.com/1117aab197.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <img src="imgs/AHMED-logos_white.png" id="logoSlider"/>
+      <span class="logo_name">Ahmed Doban</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          
+          <i class="far fa-user"></i>
+          <span class="link_name">User</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">User</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class="fas fa-music"></i>
+            <span class="link_name">Music</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Music Menu</a></li>
+          <li><a href="#">Arabic</a></li>
+          <li><a href="#">Englisgh</a></li>
+          <li><a href="#">Frinch</a></li>
+        </ul>
+      </li>
+     
+      <li>
+        <a href="#">
+            <i class="far fa-folder"></i>
+            <span class="link_name"> Folders</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Folders</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+            <i class="far fa-heart"></i>
+            <span class="link_name"> Favorites</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Favorites</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+            <i class="fas fa-cog"></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="profile-details">
+      <div class="profile-content">
+        <img src="imgs/PicsArt_09-30-09.37.38.jpg" alt="Profile Picture"> 
+      </div>
+      <div class="name-job">
+        <div class="profile_name">Ahmed Doban</div>
+        <div class="job">Web Developer</div>
+      </div>
+          <i class="fas fa-sign-out-alt" id="Log_out"></i>
+    </div>
+  </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+    
+      <i class="fas fa-bars"style=" font:50px;;color: #fff;"></i>
+      <span class="text" style="color: #fff;"> Menu</span>
+
+            <div class="bg-text">
+                <div class="imgSong"></div>
+                        <h1>Sia</h1>
+                        <p>Courage To Change</p>
+                        <div class="iconsMusicControl">
+                            <i class="fas fa-backward"></i>
+                            <i class="fas fa-pause"></i>
+                            <i class="fas fa-forward"></i>
+                        </div>
+            </div>
+
+    </div>
+  </section>
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".fa-bars");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>
