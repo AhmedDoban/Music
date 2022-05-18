@@ -9,11 +9,14 @@
     <script src="https://kit.fontawesome.com/1117aab197.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/e39d260dfe.js" crossorigin="anonymous"></script>
+     <link href="imgs/icon.jpg" rel="icon">
+     <script src="js/vue.js"></script>
    </head>
 <body>
   <div class="sidebar close">
     <div class="logo-details">
-      <img src="imgs/AHMED-logos_white.png" id="logoSlider"/>
+      <i class="fas fa-bars"style=" font:50px;;color: #fff;"></i>
       <span class="logo_name">Ahmed Doban</span>
     </div>
     <ul class="nav-links">
@@ -85,38 +88,23 @@
 </ul>
   </div>
   <section class="home-section">
-    <div class="home-content">
-    
-      <i class="fas fa-bars"style=" font:50px;;color: #fff;"></i>
-      <span class="text" style="color: #fff;"> Menu</span>
-
+    <div class="home-content"> 
+      <img src="/imgs/Sia-Press-Photo-1.jpg" >
             <div class="bg-text">
-                <div class="imgSong"></div>
+
                         <h1>Sia</h1>
                         <p>Courage To Change</p>
-                        <div class="iconsMusicControl">
+                        <div class="iconsMusicControl" id="App">
                             <i class="fas fa-backward"></i>
-                            <i class="fas fa-pause"></i>
+                            <button v-on:click="show=!show">
+                              <i v-if="!show" v-on:click="pauseVid" class="fas fa-pause"></i>
+                              <i v-else v-on:click="playAduio" class="fa-solid fa-play"></i>
+                            </button>           
                             <i class="fas fa-forward"></i>
                         </div>
             </div>
-
     </div>
   </section>
-  <script>
-  let arrow = document.querySelectorAll(".arrow");
-  for (var i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e)=>{
-   let arrowParent = e.target.parentElement.parentElement;
-   arrowParent.classList.toggle("showMenu");
-    });
-  }
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".fa-bars");
-  console.log(sidebarBtn);
-  sidebarBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("close");
-  });
-  </script>
+  <script src="js/slider.js"></script>
 </body>
 </html>
