@@ -1,5 +1,8 @@
 //audio play
 var audio = new Audio('/song/Sia-Courage-To-Change.mp3');
+window.onload = function playAduio(){
+  audio.play()
+}
 new Vue({
   el:'#App',
     data:{
